@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div id="static-content">
+    <div id="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <h2 class="post-subtitle">—{{ page.snip }}</h2>
+        <br class="clearfix">
+        <div class="item-meta">
+            Posted on <time class="timeago" datetime="{{ page.date | date:"%a, %d %b %Y %H:%M:%S GMT-0300" }}">{{ page.date | date:"%d %B %Y" }}</time>
+        </div>
+    </div>
+    
+    {{ content }}
+	
+</div>
