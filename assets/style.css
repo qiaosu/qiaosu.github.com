@@ -205,11 +205,12 @@ h1 span {
 
 #nav li strong {
 	font-family: Impact, Charcoal, Arial, sans-serif;
-	font-size: 20px;
+	font-size: 24px;
   	letter-spacing: 2px;
   	font-weight: normal;
 	text-transform: uppercase;
-	padding-bottom: 12px;
+	padding-bottom: 4px;
+	display: block;
 }
 
 #nav li em {
@@ -224,6 +225,11 @@ h1 span {
 	width: 990px;
 	margin: 0 auto;
 	padding: 20px 0;
+}
+
+#content {
+	min-height: 300px;
+	_height: 300px;
 }
 
 .blog-list li {
@@ -242,4 +248,9 @@ h1 span {
 	position: relative;
 	top: 2px;
 	color: #C0442C;
+}
+
+.post-subtitle {
+	margin: 0px 0px 0px 2em;
+	font-size: 1.6em;
 }
