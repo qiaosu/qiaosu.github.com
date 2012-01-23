@@ -209,7 +209,7 @@ h1 span {
   	letter-spacing: 2px;
   	font-weight: normal;
 	text-transform: uppercase;
-	padding-bottom: 8px;
+	padding-bottom: 12px;
 }
 
 #nav li em {
@@ -224,6 +224,10 @@ h1 span {
 	width: 990px;
 	margin: 0 auto;
 	padding: 20px 0;
+}
+
+.blog-list li {
+	padding: 8px 0;
 }
 
 .post-title {
