@@ -1,77 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Qiao Su's .-Blog Page</title>
-  <meta name="viewport" content="width=device-width; initial-scale=0.45">
-  <link href="../assets/style.css" rel="stylesheet"></link>
-</head>
-<body class="blog">
-<div id="header">
-    <div id="logo">
-        <a href="/"><h1>Qiao Su <span>| 樵苏</span></h1></a>
-        <em></em>
-    </div>
-</div>
+---
+layout: default
+title:  main
+---
 
-<div id="nav">
-    <ul class="fn-clear">
-        <li>
-            <a href="/">
-                <em>首页@开始</em>
-                <strong>Home</strong>
-            </a>
-        </li>
-        <li>
-            <a href="/blog">
-                <em>博客@记录</em>
-                <strong>Blog</strong>
-            </a>
-        </li>
-        <li>
-            <a href="/bookmark">
-                <em>书签@来自Google Reader</em>
-                <strong>Bookmark</strong>
-            </a>
-        </li>
-        <li>
-            <a href="/about">
-                <em>关于我</em>
-                <strong>About</strong>
-            </a>
-        </li>
-    </ul>
-</div>
-<div id="content">
-    <div id="wrapper">
-        <ul class="blog-list">
-            <li>
-                <h2 class="post-title">
-                    <span>≣</span> <a href="/blog/2012/01/learning-uml-diagram/index.html">Learning UML Diagram</a>
-                </h2>
-                <p class="post-subtitle">—An important part of understanding OO development. </p>
-            </li>
-            <li>
-                <h2 class="post-title">
-                    <span>≣</span> <a href="/blog/2012/01/learning-javascript-oop/index.html">Learning JavaScript OOP</a>
-                </h2>
-                <p class="post-subtitle">—OOP by JavaScript.</p>
-            </li>
-            <li>
-                <h2 class="post-title">
-                    <span>≣</span> <a href="/blog/2012/01/learning-javascript-design-patterns/index.html">Learning JavaScript design patterns</a>
-                </h2>
-                <p class="post-subtitle">—Collection the design patterns in my code life.</p>
-            </li>
-            <li>
-                <h2 class="post-title">
-                    <span>≣</span> <a href="/blog/2012/01/learning-javascript-mvc/index.html">Learning JavaScript MVC</a>
-                </h2>
-                <p class="post-subtitle">—Exploring Model-View-Controller architectural design pattern.</p>
-            </li>
-        <ul>
-    </div>
-</div>
-<div id="footer"><p>©Copyright 2012 by 樵苏 tracy.xin.li@gmail.com</p></div>
-</body>
-</html>
+<ul class="blog-list">
+    {% for post in site.posts %}
+    <li>
+        <h2 class="post-title"><span>≣</span> <a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p class="post-subtitle">—{{ post.snip }}</p>
+    </li>
+    {% endfor %}
+</ul>
