@@ -219,15 +219,3 @@ h1 span {
 	padding: 20px 0;
 }
 
-.post-title {
-	font-family: "Trebuchet MS", sans-serif;
-	font-weight: bold;
-	font-size: 1.5em;
-	color: #999;
-	border: none !important;
-}
-
-.post-title a {
-	position: relative;
-	top: 2px;
-}
