@@ -240,8 +240,12 @@ h1 span {
 	font-family: "Trebuchet MS", sans-serif;
 	font-weight: bold;
 	font-size: 2.4em;
-	color: #999;
+	color: #C0442C;
 	border: none !important;
+}
+
+.post-title span {
+	color: #999;
 }
 
 .post-title a {
