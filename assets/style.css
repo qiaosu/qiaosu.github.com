@@ -256,7 +256,7 @@ h1 span {
 
 .post-subtitle {
 	margin: 0px 0px 0px 2em !important;
-	font-size: 1.6em !important;
+	font-size: 1.2em !important;
 	border-bottom: 0 none !important;
 }
 
@@ -265,7 +265,7 @@ h1 span {
 }
 
 #static-content {
-	width: 700px;
+	width: 790px;
 	margin: 0 auto;
 	color: #555;
 	font-size: 115%;
@@ -290,4 +290,10 @@ h1 span {
 
 #static-content h2 {
 	font-size: 1.8em;
+}
+
+#static-content .item-meta {
+	font-size: 90%;
+	margin: 2em 0 -2em 0;
+	color: #999;
 }
