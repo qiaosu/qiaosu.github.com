@@ -341,8 +341,15 @@ h1 span {
 	border-bottom: 0 none !important;
 	margin-top: 1em !important;
 	font-size: 115%;
+	display: inline;
 }
 
 #bookmark h2 a {
 	color: #d1553d;
+}
+
+#bookmark .bookmark-date {
+	margin-left: 2em;
+	color: #999;
+	font-size: 90%;
 }
