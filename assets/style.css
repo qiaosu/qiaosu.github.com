@@ -337,9 +337,12 @@ h1 span {
 	margin: 0 2em;
 }
 
+#bookmark li {
+	margin-top: 1em !important;
+}
+
 #bookmark h2 {
 	border-bottom: 0 none !important;
-	margin-top: 1em !important;
 	font-size: 115%;
 	display: inline;
 }
@@ -349,7 +352,7 @@ h1 span {
 }
 
 #bookmark .bookmark-date {
-	margin-left: 2em;
+	margin-left: 1em;
 	color: #999;
 	font-size: 90%;
 }
