@@ -310,11 +310,17 @@ h1 span {
 
 #static-content #table-of-contents ul {
 	list-style: none;
-	margin-top: 2em;
+	margin-top: 1.2em;
 	font-size: 1.2em;
 }
 
 #static-content #table-of-contents ul ul {
 	margin: 0.2em 0 0.5em 2em;
 	font-size: 0.8em;
+}
+
+#static-content p {
+	line-height: 1.4em;
+	text-align: left;
+	margin: 1.5em 0;
 }
