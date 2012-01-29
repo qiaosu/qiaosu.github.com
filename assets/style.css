@@ -255,8 +255,9 @@ h1 span {
 }
 
 .post-subtitle {
-	margin: 0px 0px 0px 2em;
-	font-size: 1.6em;
+	margin: 0px 0px 0px 2em !important;
+	font-size: 1.6em !important;
+	border-bottom: 0 none !important;
 }
 
 .post-intro {
@@ -280,7 +281,7 @@ h1 span {
 }
 
 #static-content h1 {
-	color: #777;
+	color: #C0442C;
 }
 
 #static-content .post-subtitle {
