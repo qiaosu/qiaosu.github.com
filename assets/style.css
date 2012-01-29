@@ -308,6 +308,10 @@ h1 span {
 	font-size: 1.2em;
 }
 
+#static-content #table-of-contents a {
+	color: #d1553d;
+}
+
 #static-content #table-of-contents ul {
 	list-style: none;
 	margin-top: 1.2em;
@@ -323,4 +327,12 @@ h1 span {
 	line-height: 1.4em;
 	text-align: left;
 	margin: 1.5em 0;
+}
+
+#static-content dl {
+	margin: 1.5em 0;
+}
+
+#static-content dd {
+	margin: 0 2em;
 }
