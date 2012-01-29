@@ -299,7 +299,21 @@ h1 span {
 }
 
 #static-content .item-meta {
-	font-size: 90%;
-	margin: 2em 0 -2em 0;
+	margin: 1em 0 0 0;
 	color: #999;
+}
+
+#static-content #table-of-contents {
+	margin: 2em 0 2em 0;
+	font-size: 1.2em;
+}
+
+#static-content #table-of-contents ul {
+	list-style: none;
+	margin-top: 2em;
+}
+
+#static-content #table-of-contents ul ul {
+	margin: 0.2em 0 0.5em 2em;
+	font-size: 0.9em;
 }
