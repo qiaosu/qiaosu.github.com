@@ -262,3 +262,31 @@ h1 span {
 .post-intro {
 	margin: 10px 0 16px 6em;
 }
+
+#static-content {
+	width: 700px;
+	margin: 0 auto;
+	color: #555;
+	font-size: 115%;
+	font-family: "DejaVu serif", Constantia, serif;
+}
+
+#static-content h1, #static-content h2, #static-content h3, #static-content h4, #static-content h5, #static-content h6 {
+	margin: 1.5em 0 0 -100px;
+	border-bottom: 3px solid #CCC;
+	font-family: "Trebuchet MS", sans-serif;
+	font-weight: bold;
+	color: #999;
+}
+
+#static-content h1 {
+	color: #777;
+}
+
+#static-content .post-subtitle {
+	margin-left: 0px !important;
+}
+
+#static-content h2 {
+	font-size: 1.8em;
+}
