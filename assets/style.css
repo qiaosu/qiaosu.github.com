@@ -336,3 +336,10 @@ h1 span {
 #static-content dd {
 	margin: 0 2em;
 }
+
+#bookmark h2 {
+	border-bottom: 0 none !important;
+	color: #d1553d;
+	margin-top: 1em !important;
+	font-size: 90%;
+}
