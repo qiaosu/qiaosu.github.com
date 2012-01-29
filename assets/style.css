@@ -236,6 +236,12 @@ h1 span {
 	padding: 8px 0;
 }
 
+#post-header {
+	font-family: "Trebuchet MS", serif;
+	font-size: 90%;
+	padding-bottom: 2em;
+}
+
 .post-title {
 	font-family: "Trebuchet MS", sans-serif;
 	font-weight: bold;
