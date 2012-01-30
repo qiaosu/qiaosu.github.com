@@ -62,9 +62,7 @@ snip:   —Collection the design patterns in my code life.
 		<p>
 		装饰者会导致设计中出现许多小对象, 如果过度使用, 会使程序变得很复杂.
 		</p>
-
-		<pre>
-			<code>// Superclass
+		<pre><code>// Superclass
 var Car = function() {…};
  
 // Subclasses with different features
@@ -75,11 +73,8 @@ var CarWithAC = function() {…};
 var CarWithACAndPowerLocks = function() {…};
 var CarWithACAndPowerWindows = function() {…};
 var CarWithACAndPowerLocksAndPowerWindows = function() {…};
-…</code>
-		</pre>
-
-		<pre>
-			<code>var Car = function() {
+…</code></pre>
+		<pre><code>var Car = function() {
     console.log('Assemble: build frame, add core parts');
 }
  
@@ -95,9 +90,7 @@ Car.prototype = {
     getPrice: function() {
         return 11000.00;
     }
-}</code>
-		</pre>
-
+}</code></pre>
 	</div>
 </div>
 
