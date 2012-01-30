@@ -363,6 +363,7 @@ pre code {
     background: none repeat scroll 0 0 #F7F7F0;
     display: block;
     padding: 0.5em;
+    color: #000;
 }
 pre .comment { color: gray; }
 pre .string { color: teal; }
@@ -371,5 +372,6 @@ pre .regexp { color: maroon; }
 pre .keyword { color: navy; font-weight: bold; }
 pre .object { color: DeepPink; }
 pre .property { color: Purple; font-weight: bold; }
-pre .function { color: olive; }
+pre .function .keyword { color: RoyalBlue; font-weight: bold; }
+pre .function .params { color: Coral; }
 pre .literal { color: RoyalBlue; font-weight: bold; }
