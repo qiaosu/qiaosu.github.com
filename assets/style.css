@@ -364,7 +364,8 @@ pre code {
     display: block;
     padding: 0.5em;
     color: #000;
-    font-family: Verdana;
+    font-family: monospace;
+    font-size: 12px;
 }
 pre .comment { color: gray; }
 pre .string { color: teal; }

@@ -79,6 +79,29 @@ var CarWithACAndPowerLocksAndPowerWindows = function() {…};
 …
 			</code>
 		</pre>
+
+		<pre>
+			<code>
+var Car = function() {
+    console.log('Assemble: build frame, add core parts');
+}
+ 
+// The decorators will also need to implement these functions
+// to comply with Car's interface.
+Car.prototype = {
+    start: function() {
+        console.log('The engine starts with roar!');
+    },
+    drive: function() {
+        console.log('Away we go!');
+    },
+    getPrice: function() {
+        return 11000.00;
+    }
+}
+    		</code>
+		</pre>
+
 	</div>
 </div>
 
