@@ -362,10 +362,11 @@ h1 span {
 pre code {
     background: none repeat scroll 0 0 #F7F7F0;
     display: block;
-    padding: 0.5em;
+    padding: 1em;
     color: #000;
     font-family: monospace;
     font-size: 12px;
+    border: dashed 1px #ccc;
 }
 pre .comment { color: gray; }
 pre .string { color: teal; }
