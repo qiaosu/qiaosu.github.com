@@ -357,6 +357,19 @@ h1 span {
 	font-size: 90%;
 }
 
+#static-content .reference {
+	font-size: 18px;
+	border-bottom: none;
+	border-top: 1px dashed #CCC;
+	color: #BBB;
+	padding-top: 10px;
+}
+
+#static-content .ref-item {
+	color: #999;
+	font-size: smaller;
+}
+
 /*** code syntax highlight style ***/
 /* Chili -- js */
 pre code {
