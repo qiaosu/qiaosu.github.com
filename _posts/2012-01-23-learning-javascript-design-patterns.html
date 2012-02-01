@@ -62,7 +62,8 @@ snip:   —Collection the design patterns in my code life.
 		<p>
 		装饰者会导致设计中出现许多小对象, 如果过度使用, 会使程序变得很复杂.
 		</p>
-		<pre><code>// Superclass
+		<pre><code>
+// Superclass
 var Espresso = function() {…};
  
 // Subclasses with different features
@@ -72,11 +73,13 @@ var EspressoWithMocha = function() {…};
 var EspressoWithSteamedMilkandSoy = function() {…};
 var EspressoWithSteamedMilkandMocha = function() {…};
 var EspressoWithSoyandMocha = function() {…};
-…</code></pre>
-		<pre><code>//The class we're going to decorate
+…
+</code></pre>
+		<pre><code>
+//The class we're going to decorate
 function Espresso(){
 	this.cost = function(){
-      	return 20;
+		return 20;
 	};
 }
 
@@ -98,7 +101,8 @@ function Mocha(espresso){
  
 // Sample usage
 var myEspresso = new Mocha(new Soy(new SteamedMilk(new Espresso())));
-console.log( myEspresso.cost() );</code></pre>
+console.log( myEspresso.cost() );
+</code></pre>
 	</div>
 </div>
 
