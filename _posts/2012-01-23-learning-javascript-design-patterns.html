@@ -63,34 +63,42 @@ snip:   —Collection the design patterns in my code life.
 		装饰者会导致设计中出现许多小对象, 如果过度使用, 会使程序变得很复杂.
 		</p>
 		<pre><code>// Superclass
-var Car = function() {…};
+var Espresso = function() {…};
  
 // Subclasses with different features
-var CarWithPowerLocks = function() {…};
-var CarWithPowerWindows = function() {…};
-var CarWithPowerLocksAndPowerWindows = function() {…};
-var CarWithAC = function() {…};
-var CarWithACAndPowerLocks = function() {…};
-var CarWithACAndPowerWindows = function() {…};
-var CarWithACAndPowerLocksAndPowerWindows = function() {…};
+var EspressoWithSteamedMilk = function() {…};
+var EspressoWithSoy = function() {…};
+var EspressoWithMocha = function() {…};
+var EspressoWithSteamedMilkandSoy = function() {…};
+var EspressoWithSteamedMilkandMocha = function() {…};
+var EspressoWithSoyandMocha = function() {…};
 …</code></pre>
-		<pre><code>var Car = function() {
-    console.log('Assemble: build frame, add core parts');
+		<pre><code>//The class we're going to decorate
+function Espresso(){
+	this.cost = function(){
+      	return 20;
+	};
+}
+
+function SteamedMilk(espresso){
+	this.cost = function(){
+		return espresso.cost() + 5;
+	};
+}
+function Soy(espresso){
+	this.cost = function(){
+		return espresso.cost() + 3;
+	};
+}
+function Mocha(espresso){
+	this.cost = function(){
+		return espresso.cost() + 6;
+	};
 }
  
-// The decorators will also need to implement these functions
-// to comply with Car's interface.
-Car.prototype = {
-    start: function() {
-        console.log('The engine starts with roar!');
-    },
-    drive: function() {
-        console.log('Away we go!');
-    },
-    getPrice: function() {
-        return 11000.00;
-    }
-}</code></pre>
+// Sample usage
+var myEspresso = new Mocha(new Soy(new SteamedMilk(new Espresso())));
+console.log( myEspresso.cost() );</code></pre>
 	</div>
 </div>
 
@@ -120,3 +128,4 @@ Car.prototype = {
 		</p>
 	</div>
 </div>
+
