@@ -211,18 +211,6 @@ espresso.cost(); //34
 		Mediator. 集中相关对象之间复杂的沟通和控制方式, 常常被用来协调相关的GUI组件.
 		</p>
 		<p>
-		Mediator模式可以通过一个简单的比喻来做介绍——将它想象成机场交通管制. 塔来处理什么飞机可以起飞和降落, 因为所有来自飞机的通信都被传输到控制塔, 而不是在飞机与飞机间通信. 一个中央控制器是这个系统成功的关键, 而这个中央控制器就是Mediator. 
-		</p>
-		<p>
-		Mediator使得各个模块的行为非常独立, 因此更具有灵活性. 如果你之前使用过Observer模式来搞定事件的收发, 你会发现Mediator模式非常易于理解.
-		</p>
-		<p>
-		看张图来加深理解:
-		</p>
-		<p>
-		<img src="/assets/design-patterns-mediator-1.jpg" title="mediator pattern diagram" alt="mediator pattern diagram" />
-		</p>
-		<p>
 		优点:  
 		</p>
 		<ol>
@@ -236,6 +224,70 @@ espresso.cost(); //34
 		<ol>
 			<li>如果设计不当, 中介者本身会变得过于复杂.</li>
 		</ol>
+		<p>
+		Mediator可以通过一个简单的比喻来做介绍——将它想象成机场交通管制. 塔来处理什么飞机可以起飞和降落, 因为所有来自飞机的通信都被传输到控制塔, 而不是在飞机与飞机间通信. 一个中央控制器是这个系统成功的关键, 而这个中央控制器就是Mediator. 
+		</p>
+		<p>
+		Mediator使得各个模块的行为非常独立, 因此更具有灵活性. 如果你之前使用过Observer来搞定事件的收发, 你会发现Mediator非常易于理解.
+		</p>
+		<p>
+		看张图来加深理解:
+		</p>
+		<p>
+		<img src="/assets/design-patterns-mediator-1.jpg" title="mediator pattern diagram" alt="mediator pattern diagram" />
+		</p>
+		<p>Mediator构造源码: </p>
+<pre><code>var mediator = (function(){
+	var subscribe = function(channel, fn){
+		if (!mediator.channels[channel]) mediator.channels[channel] = [];
+		mediator.channels[channel].push({ context: this, callback: fn });
+		return this;
+	},
+
+	publish = function(channel){
+		if (!mediator.channels[channel]) return false;
+		var args = Array.prototype.slice.call(arguments, 1);
+		for (var i = 0, l = mediator.channels[channel].length; i < l; i++) {
+			var subscription = mediator.channels[channel][i];
+			subscription.callback.apply(subscription.context, args);
+		}
+		return this;
+	};
+
+	return {
+		channels: {},
+		publish: publish,
+		subscribe: subscribe,
+		installTo: function(obj){
+			obj.subscribe = subscribe;
+			obj.publish = publish;
+		}
+	};
+}());
+</code></pre>
+		<p>应用: </p>
+<pre><code>//Pub/sub on a centralized mediator
+mediator.name = "tim";
+mediator.subscribe('nameChange', function(arg){
+	console.log(this.name);
+	this.name = arg;
+	console.log(this.name);
+});
+
+mediator.publish('nameChange', 'david'); //tim, david
+
+//Pub/sub via third party mediator
+
+var obj = { name: 'sam' };
+mediator.installTo(obj);
+obj.subscribe('nameChange', function(arg){
+	console.log(this.name);
+	this.name = arg;
+	console.log(this.name);
+});
+
+obj.publish('nameChange', 'john'); //sam, john
+</code></pre>
 	</div>
 </div>
 
