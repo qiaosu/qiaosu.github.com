@@ -167,6 +167,19 @@ espresso = new MochaDecorator(espresso);
 // let's calculate the cost
 espresso.cost(); //34
 </code></pre>
+
+	<p>
+	如何更好地理解"若要扩展功能, 装饰者提供了比继承更有弹性的替代方案"这句话呢?
+	</p>
+	<p>
+	如果使用继承, 子类添加行为, 将会影响到所有子类的实例. 而使用Decorator模式, 则不会有这样的影响, 可以很轻易地覆盖实例原有的行为或者扩展新的行为.
+	</p>
+	<p>
+	与Mixins的区别?
+	</p>
+	<p>
+	两者在行为上有很大的不同, 装饰者允许你通过扩展来改变原有的行为, 而Mixins则通常用来添加新特性或完全覆盖原有的特性.
+	</p>
 	</div>
 </div>
 
