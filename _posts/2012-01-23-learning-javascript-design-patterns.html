@@ -106,6 +106,60 @@ var myEspresso = new Mocha(new Soy(new SteamedMilk(new Espresso())));
 console.log( myEspresso.cost() );
 </code></pre>
 		<p>继续改造一下：</p>
+<pre><code>
+// Basic Class
+var Espresso = function(){};
+Espresso.prototype = {
+	cost : function(){
+		return 20;
+	}
+};
+
+// Decorator
+var EspressoDecorator = function(espresso) {
+	this.espresso = espresso;
+};
+EspressoDecorator.prototype = {
+	cost : function(){
+		return this.espresso.cost();
+	}
+};
+
+var SteamedMilkDecorator = function(espresso){
+	EspressoDecorator.call(this, espresso);
+};
+SteamedMilkDecorator.prototype = new EspressoDecorator();
+SteamedMilkDecorator.prototype.cost = function(){
+	return this.espresso.cost() + 5;
+}
+
+var SoyDecorator = function(espresso){
+	EspressoDecorator.call(this, espresso);
+};
+SoyDecorator.prototype = new EspressoDecorator();
+SoyDecorator.prototype.cost = function(){
+	return this.espresso.cost() + 3;
+}
+
+var MochaDecorator = function(espresso){
+	EspressoDecorator.call(this, espresso);
+};
+MochaDecorator.prototype = new EspressoDecorator();
+MochaDecorator.prototype.cost = function(){
+	return this.espresso.cost() + 6;
+}
+ 
+// Sample usage
+var espresso = new Espresso();
+ 
+// give the espresso some decorators
+espresso = new SteamedMilkDecorator(espresso);
+espresso = new SoyDecorator(espresso);
+espresso = new MochaDecorator(espresso);
+ 
+// let's calculate the cost
+espresso.cost(); //34
+</code></pre>
 	</div>
 </div>
 
