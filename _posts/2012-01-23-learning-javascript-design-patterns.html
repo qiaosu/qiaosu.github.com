@@ -208,7 +208,19 @@ espresso.cost(); //34
 	<h2 id="sec-6">6. Mediator </h2>
 	<div class="outline-text-2" id="text-6">
 		<p>
-		Mediator. 常常被用来协调相关的GUI组件.
+		Mediator. 集中相关对象之间复杂的沟通和控制方式, 常常被用来协调相关的GUI组件.
+		</p>
+		<p>
+		Mediator模式可以通过一个简单的比喻来做介绍——将它想象成机场交通管制. 塔来处理什么飞机可以起飞和降落, 因为所有来自飞机的通信都被传输到控制塔, 而不是在飞机与飞机间通信. 一个中央控制器是这个系统成功的关键, 而这个中央控制器就是Mediator. 
+		</p>
+		<p>
+		Mediator使得各个模块的行为非常独立, 因此更具有灵活性. 如果你之前使用过Observer模式来搞定事件的收发, 你会发现Mediator模式非常易于理解.
+		</p>
+		<p>
+		看张图来加深理解:
+		</p>
+		<p>
+		<img src="assets/design-patterns-mediator-1.jpg" title="mediator pattern diagram" alt="mediator pattern diagram" />
 		</p>
 		<p>
 		优点:  
