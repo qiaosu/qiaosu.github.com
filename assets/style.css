@@ -337,6 +337,14 @@ h1 span {
 	margin: 0 2em;
 }
 
+#static-content ol, #static-content ul {
+	margin-left: 2em;
+}
+
+#static-content ol {
+	list-style: decimal;
+}
+
 #bookmark li {
 	margin-top: 1em !important;
 }

@@ -58,11 +58,18 @@ snip:   —Collection the design patterns in my code life.
 		Decorator. 动态地将责任附加到对象上. 若要扩展功能, 装饰者提供了比继承更有弹性的替代方案.
 		</p>
 		<p>
-		比继承更为弹性的设计, 避免滥用继承; 对扩展开放, 对修改关闭; 
+		优点:  
 		</p>
+		<ol>
+			<li>比继承更为弹性的设计, 避免滥用继承;</li>
+			<li>对扩展开放, 对修改关闭.</li>
+		</ol>
 		<p>
-		装饰者会导致设计中出现许多小对象, 如果过度使用, 会使程序变得很复杂.
+		缺点:
 		</p>
+		<ol>
+			<li>装饰者会导致设计中出现许多小对象, 如果过度使用, 会使程序变得很复杂.</li>
+		</ol>
 <pre><code>// Superclass
 var Espresso = function() {…};
  
