@@ -28,6 +28,7 @@ snip:   —Collection the design patterns in my code life.
 			<li><a href="#sec-4">4. Proxy</a></li>
 			<li><a href="#sec-5">5. Facade</a></li>
 			<li><a href="#sec-6">6. Mediator</a></li>
+			<li><a href="#sec-7">7. Mixins</a></li>
 		</ul>
 	</div>
 </div>
@@ -62,7 +63,7 @@ snip:   —Collection the design patterns in my code life.
 		<p>
 		装饰者会导致设计中出现许多小对象, 如果过度使用, 会使程序变得很复杂.
 		</p>
-		<pre><code>
+<pre><code>
 // Superclass
 var Espresso = function() {…};
  
@@ -75,7 +76,8 @@ var EspressoWithSteamedMilkandMocha = function() {…};
 var EspressoWithSoyandMocha = function() {…};
 …
 </code></pre>
-		<pre><code>
+		<p>应用Decorator模式我们可以这样写：</p>
+<pre><code>
 //The class we're going to decorate
 function Espresso(){
 	this.cost = function(){
@@ -103,6 +105,7 @@ function Mocha(espresso){
 var myEspresso = new Mocha(new Soy(new SteamedMilk(new Espresso())));
 console.log( myEspresso.cost() );
 </code></pre>
+		<p>继续改造一下：</p>
 	</div>
 </div>
 
@@ -130,6 +133,18 @@ console.log( myEspresso.cost() );
 		<p>
 		Mediator.
 		</p>
+	</div>
+</div>
+
+<div id="outline-container-7" class="outline-2">
+	<h2 id="sec-7">7. Mediator </h2>
+	<div class="outline-text-2" id="text-7">
+		<p>
+		Mixins.
+		</p>
+<pre><code>
+  
+</code></pre>
 	</div>
 </div>
 
