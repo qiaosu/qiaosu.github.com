@@ -16,6 +16,8 @@ snip:   —Collection the design patterns in my code life.
 <dd>针对接口编程, 不针对实现编程</dd>
 <dd>为交互对象之间的松耦合设计而努力</dd>
 <dd>对扩展开放, 对修改关闭</dd>
+<dd>依赖抽象, 不要依赖具体类</dd>
+<dd>类应该只有一个改变的理由</dd>
 </dl>
 
 <div id="table-of-contents">
@@ -206,13 +208,27 @@ espresso.cost(); //34
 	<h2 id="sec-6">6. Mediator </h2>
 	<div class="outline-text-2" id="text-6">
 		<p>
-		Mediator.
+		Mediator. 常常被用来协调相关的GUI组件.
 		</p>
+		<p>
+		优点:  
+		</p>
+		<ol>
+			<li>将对象彼此解耦, 增加对象复用性;</li>
+			<li>将控制逻辑集中, 简化系统维护;</li>
+			<li>让对象之间的消息传递变得简单且大幅减少.</li>
+		</ol>
+		<p>
+		缺点:
+		</p>
+		<ol>
+			<li>如果设计不当, 中介者本身会变得过于复杂.</li>
+		</ol>
 	</div>
 </div>
 
 <div id="outline-container-7" class="outline-2">
-	<h2 id="sec-7">7. Mediator </h2>
+	<h2 id="sec-7">7. Mixins </h2>
 	<div class="outline-text-2" id="text-7">
 		<p>
 		Mixins.
@@ -223,3 +239,10 @@ espresso.cost(); //34
 	</div>
 </div>
 
+<div id="reference">
+	<h2 class="reference">Reference: </h2>
+	<div id="text-reference">
+		<p class="ref-item"><sup>1</sup> : <a href="http://www.amazon.com/gp/product/0596007124" target="_blank">Head First Design Patterns</a>
+		</p>
+	</div>
+</div>
