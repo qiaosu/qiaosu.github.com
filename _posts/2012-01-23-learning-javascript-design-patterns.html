@@ -51,8 +51,74 @@ snip:   —Collection the design patterns in my code life.
 	<h2 id="sec-2">2. Observer </h2>
 	<div class="outline-text-2" id="text-2">
 		<p>
-		Observer.
+		Observer. 定义了一系列对象之间的一对多关系, 当一个对象改变状态时, 它的所有依赖者都会收到通知.
 		</p>
+		<p>
+		优点:  
+		</p>
+		<ol>
+			<li>让对象彼此解耦, 实现松耦合设计.</li>
+			<li>对象(主题)发送一条通知可同时被多个订阅者接收.</li>
+		</ol>
+		<p>
+		注意: 多个订阅者接收同一条更新通知时, 并不依赖特定的次序.
+		</p>
+		<p>
+		对象(主题)和订阅者之间是松耦合结合, 对象(主题)不知道订阅者的细节, 只知道订阅者实现了相关的接口.
+		</p>
+		<p>
+		是自定义事件和MVC思想实现的基础设计模式之一. 应用非常广泛.
+		</p>
+		<p>
+		我们可以自己实现观察者, 这并不困难:
+		</p>
+<pre><code>
+var pubsub = {};
+(function(q) {
+	var topics = {},
+		subUid = -1;
+
+	q.publish = function(topic, args) {
+		if (!topics[topic]) {
+			return false;
+		}
+		setTimeout(function() {
+			var subscribers = topics[topic],
+				len = subscribers ? subscribers.length : 0;
+			while (len--) {
+				subscribers[len].func(topic, args);
+			}
+		}, 0);
+		return true;
+	};
+
+	q.subscribe = function(topic, func) {
+		if (!topics[topic]) {
+			topics[topic] = [];
+		}
+		var token = (++subUid).toString();
+		topics[topic].push({
+			token: token,
+			func: func
+		});
+		return token;
+	};
+
+	q.unsubscribe = function(token) {
+		for (var m in topics) {
+			if (topics[m]) {
+				for (var i = 0, j = topics[m].length; i < j; i++) {
+					if (topics[m][i].token === token) {
+						topics[m].splice(i, 1);
+						return token;
+					}
+				}
+			}
+		}
+		return false;
+	};
+}(pubsub));
+</code></pre>
 	</div>
 </div>
 
