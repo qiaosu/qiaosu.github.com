@@ -270,6 +270,34 @@ espresso.cost(); //34
 		<p>
 		Facade.
 		</p>
+<pre><code>
+var DED = window.DED || {}; 
+DED.util = {
+	stopPropagation: function(e) { 
+		if (ev.stopPropagation) {
+			// W3 interface 
+			e.stopPropagation();
+		} else {
+			// IE's interface 
+			e.cancelBubble = true;
+		} 
+	},
+	preventDefault: function(e) { 
+		if (e.preventDefault) {
+			// W3 interface 
+			e.preventDefault();
+		} else { 
+			// IE's interface 
+			e.returnValue = false;
+		} 
+	},
+	/* our convenience method */ 
+	stopEvent: function(e) {
+		DED.util.stopPropagation(e); 
+		DED.util.preventDefault(e);
+	} 
+};
+</code></pre>
 	</div>
 </div>
 
