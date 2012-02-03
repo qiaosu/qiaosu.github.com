@@ -18,6 +18,7 @@ snip:   —Collection the design patterns in my code life.
 <dd>对扩展开放, 对修改关闭</dd>
 <dd>依赖抽象, 不要依赖具体类</dd>
 <dd>类应该只有一个改变的理由</dd>
+<dd>Least Knowledge. 减少对象之间的交互.</dd>
 </dl>
 
 <div id="table-of-contents">
@@ -268,7 +269,23 @@ espresso.cost(); //34
 	<h2 id="sec-5">5. Facade </h2>
 	<div class="outline-text-2" id="text-5">
 		<p>
-		Facade.
+		Facade. 提供统一的接口, 用来访问子系统中的一群接口. 外观定义了一个高层接口, 使子系统更容易使用.
+		</p>
+		<p>
+		优点:  
+		</p>
+		<ol>
+			<li>简化接口, 减少了系统之间复杂的调用逻辑, 在团队合作中非常实用;</li>
+			<li>将客户与子系统之间的复杂逻辑解耦.</li>
+		</ol>
+		<p>
+		缺点:
+		</p>
+		<ol>
+			<li>有可能导致很多"包装类"被制造出来, 而增加复杂度和开发时间, 并降低性能.</li>
+		</ol>
+		<p>
+		想象一下电视机遥控, 我们只需要通过几个有限的按键就可以操作电视机, 而不需要了解电视机内部的复杂逻辑, 这就是外观的魅力.
 		</p>
 <pre><code>
 var DED = window.DED || {}; 
@@ -298,6 +315,12 @@ DED.util = {
 	} 
 };
 </code></pre>
+		<p>
+		每个子系统只能拥有一个外观吗?
+		</p>
+		<p>
+		不, 你可以为子系统创建一个以上的外观.
+		</p>
 	</div>
 </div>
 
