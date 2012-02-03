@@ -275,6 +275,30 @@ espresso.cost(); //34
 		<p>
 		使用Adapter可以允许我们使用新的框架和子集合, 而无需改变任何代码, 由Adapter负责做转换.
 		</p>
+<pre><code>var AjaxLogger = {
+	sendLog: function() {
+		var data = this.urlEncode(arguments);
+ 
+		jQuery.ajax({
+			url: "http://example.com/log",
+			data: data
+		});
+	},
+ 
+	urlEncode: function(arg) {
+		…
+		return encodedData;
+	},
+	…
+};
+
+//adapter
+var AjaxLoggerAdapter = {
+	og: function(arg) {
+		AjaxLogger.sendLog(arg);
+	}
+};
+</code></pre>
 	</div>
 </div>
 
