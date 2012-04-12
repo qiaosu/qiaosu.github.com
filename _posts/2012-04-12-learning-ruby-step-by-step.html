@@ -1,0 +1,45 @@
+---
+layout: post
+title:  Learning Ruby Step By Step
+snip:   Today I think I should learn another program language, so i choose Ruby.
+---
+
+<div id="table-of-contents">
+	<h2>Table of Contents</h2>
+	<div id="text-table-of-contents">
+		<ul>
+			<li><a href="#sec-1">1. {创建xls周报文件}</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+	<h2 id="sec-1">1. 创建xls周报文件 </h2>
+	<div class="outline-text-2" id="text-1">
+		<p>
+		学习rubu日期处理，rb-appscript和spreadsheet插件。
+		</p>
+<pre><code>
+begin; require 'rubygems'; rescue LoadError; end
+require 'spreadsheet'
+
+Spreadsheet.client_encoding = 'UTF-8'
+
+
+date = Date.today
+d = date.to_s
+
+d_prev = (date - 7).to_s
+
+book = Spreadsheet.open('/Users/kenshin/Desktop/WeeklyWorkingReport/WeeklyReportTemplate.xls')
+sheet = book.worksheet(0)
+sheet[0,0] = '商业产品技术部-前端开发组 工作周报 ' + d_prev + ' ~ ' + d
+sheet[1,1] = d
+#do something...
+book.write('/Users/kenshin/Desktop/WeeklyWorkingReport/('+ d +')商业产品前端组-樵苏周报.xls')
+</code></pre>
+		<p class="updated">
+		--2012.4.12
+		</p>
+	</div>
+</div>
