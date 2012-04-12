@@ -13,6 +13,9 @@ The Productive Programmer.
 	<div id="text-table-of-contents">
 		<ul>
 			<li><a href="#sec-1">1. {加速法则}</a></li>
+			<li><a href="#sec-2">2. {专注法则}</a></li>
+			<li><a href="#sec-3">3. {自动化法则}</a></li>
+			<li><a href="#sec-4">4. {规范性法则}</a></li>
 		</ul>
 	</div>
 </div>
@@ -21,37 +24,37 @@ The Productive Programmer.
 	<h2 id="sec-1">1. {加速法则} </h2>
 	<div class="outline-text-2" id="text-1">
 		<p>
-		* 整理你的Dock栏, 不要将任何不常用的应用留在Dock栏中.
+		* 整理你的Dock栏，不要将任何不常用的应用留在Dock栏中。
 		</p>
 		<p class="updated">
 		--2012.2.11
 		</p>
 		<p>
-		* 使用Alfred(取代书中的Quicksilver).
+		* 使用Alfred(取代书中的Quicksilver)。
 		</p>
 		<blockquote>
 			<h3>{Alfred}</h3>
 			<p>http://support.alfredapp.com/</p>
 			<p>Top Questions</p>
 			<ul>
-				<li>1. 文件搜索, 在搜索前面加’find’或者’open’;</li>
-				<li>2. browse Mac:  press ~ for Home directory; press / for root directory;</li>
+				<li>1. 文件搜索，在搜索前面加’find’或者’open’；</li>
+				<li>2. browse Mac：press ~ for Home directory; press / for root directory。</li>
 			</ul>
 			<p>Tasks</p>
 			<ul>
-				<li>任务一: 会使用alfred打开常用的应用程序; -done</li>
-				<li>任务二: 创建一个custom search, 搜索内网wiki. -done</li>
+				<li>任务一: 会使用alfred打开常用的应用程序。 -done</li>
+				<li>任务二: 创建一个custom search，搜索内网wiki。 -done</li>
 			</ul>
 		</blockquote>
 		<p class="updated">
 		--2012.2.11
 		</p>
 		<p>
-		* 熟练常用开发工具的快捷键.
+		* 熟练常用开发工具的快捷键。
 		</p>
 		<blockquote>
 			<h3>{Sublime Text 2}</h3>
-			<p>自改:</p>
+			<p>自改：</p>
 			<ul>
 				<li>复制一行: super+shift+v</li>
 				<li>删除一行: super+d</li>
@@ -62,5 +65,106 @@ The Productive Programmer.
 		<p class="updated">
 		--2012.4.5
 		</p>
+		<p>小结：</p>
+		<p>每天花一点时间来使每天更加高效。</p>
+		<p>运用加速方法的两个条件，一是对加速器的理解，以及使用他们的适当场景。一切的要点都在于寻找一种平衡，一方面需要花时间去学习，一方面这些学习会让你更加高效。</p>
+	</div>
+</div>
+
+<div id="outline-container-2" class="outline-2">
+	<h2 id="sec-2">2. {专注法则} </h2>
+	<div class="outline-text-2" id="text-2">
+		<p>
+		* 关掉不需要的提示，如邮件提示，growl提示等。
+		</p>
+		<p class="updated">
+		--2012.4.8
+		</p>
+		<p>
+		* 搜索优于导航，更多地使用搜索来定位文件。
+		</p>
+		<p class="updated">
+		--2012.4.8
+		</p>
+		<p>
+		* 在Finder中使用基于项目的快捷方式。当你近期会专注于一个项目时，为这个项目创建一个快捷方式是个不错的选择。
+		</p>
+		<p class="updated">
+		--2012.4.8
+		</p>
+		<p>
+		* 使用多显示器，使用Spaces虚拟桌面来拆分工作空间，开发，调试，文档，交流等。
+		</p>
+		<p class="updated">
+		--2012.4.8
+		</p>
+		<p>小结：</p>
+		<p>想办法改变环境以减少打扰，减少来自电脑的打扰，以及借助工具保持专注。</p>
+	</div>
+</div>
+
+<div id="outline-container-3" class="outline-2">
+	<h2 id="sec-3">3. {自动化法则} </h2>
+	<div class="outline-text-2" id="text-3">
+		<p>
+		* 编写小脚本来做重复简单的工作。
+		</p>
+		<blockquote>
+			<p>Tasks</p>
+			<ul>
+				<li>任务一: 编写一段小脚本来创建新一周的周报。</li>
+				<li>任务二: 编写一段小脚本来创建周报邮件。</li>
+			</ul>
+		</blockquote>
+		<p class="updated">
+		--2012.4.8
+		</p>
+		<p>
+		* 使用wget工具建立本地缓存。
+		</p>
+		<blockquote>
+			<h3>{Wget}</h3>
+			<p>reference</p>
+			<ul>
+				<li>wget 启动wget工具。</li>
+				<li>--mirror 给网站建立本地镜像。</li>
+				<li>--html-extension 将cgi或php等后缀的文件名也最终生成html文件。</li>
+				<li>--convert-links 将所有链接转为本地链接。</li>
+				<li>-P c:wget_files\example1 指定保存镜像的本地目录。</li>
+			</ul>
+			<p>Tasks</p>
+			<ul>
+				<li>任务一: 创建spineJs Doc的本地镜像。</li>
+			</ul>
+		</blockquote>
+		<p class="updated">
+		--2012.4.8
+		</p>
+		<p>
+		* 用Rake执行常见任务。
+		</p>
+		<blockquote>
+			<p>Tasks</p>
+			<ul>
+				<li>任务一: 待定。</li>
+			</ul>
+		</blockquote>
+		<p class="updated">
+		--2012.4.8
+		</p>
+		<p>
+		* 用Selenium浏览网页。
+		</p>
+		<blockquote>
+			<p>Tasks</p>
+			<ul>
+				<li>任务一: 待定。</li>
+			</ul>
+		</blockquote>
+		<p class="updated">
+		--2012.4.8
+		</p>
+		<p>小结：</p>
+		<p>做简单而重复的事是在浪费注意力。</p>
 	</div>
 </div>
