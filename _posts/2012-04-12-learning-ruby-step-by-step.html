@@ -9,6 +9,7 @@ snip:   Today I think I should learn another program language, so i choose Ruby.
 	<div id="text-table-of-contents">
 		<ul>
 			<li><a href="#sec-1">1. {创建xls周报文件}</a></li>
+			<li><a href="#sec-2">2. 语法学习Part-1</a></li>
 		</ul>
 	</div>
 </div>
@@ -48,6 +49,40 @@ book.write('/Users/kenshin/Desktop/WeeklyWorkingReport/('+ d +')商业产品前�
 		</p>
 		<p class="updated">
 		--2012.4.12
+		</p>
+	</div>
+</div>
+
+<div id="outline-container-2" class="outline-2">
+	<h2 id="sec-2">2. 语法学习Part-1</h2>
+	<div class="outline-text-2" id="text-2">
+		<ol>
+			<li>
+				<div>
+					<h4>include, require, load的区别</h4>
+					<p>require和load用于加载文件，include用于加载模块。</p>
+					<p>load加载的文件需要带后缀.rb，require不用。require多用于加载库文件，load多用于加载配置文件。</p>
+					<p>include用于mix-in模块，减少书写长度。</p>
+<pre><code>require 'webrick'
+include 'webrick'
+
+server = HTTPServer.new(...)
+//可以不用 server = WEBrick::HTTPServer.new(...)
+</code></pre>
+				</div>
+			</li>
+			<li>
+				<div>
+					<h4>Module的用法</h4>
+					<p>1. Namespaces</p>
+					<p>提供了命名空间的作用来减少命名冲突。</p>
+					<p>2. Mixins</p>
+					<p>通过Module来实现Mixins，作为多重继承的一种替代。</p>
+				</div>
+			</li>
+		</ol>
+		<p>
+		学习rubu日期处理，rb-appscript和spreadsheet插件。
 		</p>
 	</div>
 </div>
