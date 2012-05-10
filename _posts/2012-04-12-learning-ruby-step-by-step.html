@@ -67,7 +67,7 @@ book.write('/Users/kenshin/Desktop/WeeklyWorkingReport/('+ d +')商业产品前�
 include 'webrick'
 
 server = HTTPServer.new(...)
-#可以不用 server = WEBrick::HTTPServer.new(...)
+//可以不用 server = WEBrick::HTTPServer.new(...)
 </code></pre>
 				</div>
 			</li>
@@ -117,6 +117,43 @@ et = EightTrack.new('Pillow')
 ph.whoamI?
 et.whoamI?
 </code></pre>
+				</div>
+			</li>
+			<li>
+				<div>
+					<h4>Class与OO</h4>
+<pre><code>class Song
+	def initialize(name)
+		@name = name
+	end
+end
+song = Song.new("Rush")
+</code></pre>
+					<p>initialize是默认的初始化方法，唯一默认的私有方法。通过Song.new生成实例。@name为实例变量。</p>
+					<p>变量类型和方法类型：</p>
+					<p>@name - 实例变量</p>
+					<p>@@name - 类变量</p>
+					<p>def to_s - 实例方法</p>
+					<p>def Song.to_s - 类方法</p>
+					<p><strong>继承</strong></p>
+<pre><code>class Jazz < Song
+	def initialize(name, author)
+		super(name)
+		@author = author
+	end
+end
+jazz = Jazz.new("Rush","Tom")
+</code></pre>		
+					<p>Song为Jazz的父类。</p>
+					<p>super关键字：带参数的super指调用父类实例变量或方法，不带参数的话，将调用父类的同名方法，传递给当前类方法的参数会默认的传给父类。</p>
+					<p><strong>访问控制</strong></p>
+					<p>public: 公共</p>	
+					<p>private: 私有</p>	
+					<p>protected: 受保护的，仅可以被定义的类或子类调用</p>
+					<p><strong>属性声明</strong></p>		
+					<p>attr_reader: 对应get</p>	
+					<p>attr_writer: 对应set</p>	
+					<p>attr_accessor: 既可读也可写</p>	
 				</div>
 			</li>
 		</ol>
