@@ -67,7 +67,7 @@ book.write('/Users/kenshin/Desktop/WeeklyWorkingReport/('+ d +')商业产品前�
 include 'webrick'
 
 server = HTTPServer.new(...)
-//可以不用 server = WEBrick::HTTPServer.new(...)
+#可以不用 server = WEBrick::HTTPServer.new(...)
 </code></pre>
 				</div>
 			</li>
@@ -76,13 +76,49 @@ server = HTTPServer.new(...)
 					<h4>Module的用法</h4>
 					<p>1. Namespaces</p>
 					<p>提供了命名空间的作用来减少命名冲突。</p>
+<pre><code>//trig.rb
+module Trig
+	PI = 3.14
+	def Trig.sin (x)
+		#...
+	end
+end
+//action.rb
+module Action
+	BAD = 1
+	def Action.sin (badness)
+		#...
+	end
+end
+//test.rb
+require 'trig'
+require 'action'
+
+y = Trig.sin(Trig::PI/4)
+wrongdoing = Action.sin(Action::BAD)
+</code></pre>					
 					<p>2. Mixins</p>
 					<p>通过Module来实现Mixins，作为多重继承的一种替代。</p>
+<pre><code>module Debug
+	def whoamI?
+		"#{self.type.name} (\##{self.id}): #{self.to_s}"
+	end
+end
+class Photograph
+	include Debug
+	#...
+end
+class EightTrack
+	include Debug
+	#...
+end
+ph = Photograph.new('West End Blues')
+et = EightTrack.new('Pillow')
+ph.whoamI?
+et.whoamI?
+</code></pre>
 				</div>
 			</li>
 		</ol>
-		<p>
-		学习rubu日期处理，rb-appscript和spreadsheet插件。
-		</p>
 	</div>
 </div>
