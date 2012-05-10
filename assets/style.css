@@ -298,6 +298,11 @@ h1 span {
 	font-size: 1.6em;
 }
 
+#static-content li h4 {
+	margin-left: 0;
+	border-bottom: dashed 1px #ccc;
+}
+
 #static-content .item-meta {
 	margin: 1em 0 0 0;
 	color: #999;
